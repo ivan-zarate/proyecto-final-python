@@ -12,10 +12,6 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ producto.nombre }}</h5>
                         <p class="card-text">$ {{ producto.precio }}</p>
-                        {% if user == producto.user %}
-                            <a href="{% url 'editar_monitor' producto.id %}">Editar</a>
-                            <a href="{% url 'eliminar_monitor' producto.id %}">Eliminar</a>
-                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}
