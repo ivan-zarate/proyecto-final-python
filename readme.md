@@ -29,12 +29,12 @@ Nota: La opción de editar y eliminar productos solo le está permitido al autor
 ### Tecnología Utilizada
 
 ###### Front-End
-1- HTML
-2- CSS
-3 - JAVASCRIPT
-4- BOOTSTRAP
+1. HTML
+2. CSS
+3. JAVASCRIPT
+4. BOOTSTRAP
 
 ###### Back-End
 
-1 - PYTHON
-2 - DJANGO
+1. PYTHON
+2. DJANGO
