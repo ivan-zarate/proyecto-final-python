@@ -1,11 +1,15 @@
 {% extends "index.html" %}
 
 {% block content %}
-    <h1>Editar Producto</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Guardar Cambios</button>
-    </form>
-    <a href="{% url 'Inicio' %}">Regresar</a>
+<div class="bg-success p-2" style="--bs-bg-opacity: .5;">
+        <h2 class="container">Editar Producto</h2>
+        <section class="container d-flex flex-column ">
+            <form class="mb-3" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-success mt-3 p-2" style="width:20em" type="submit">Guardar Cambios</button>
+            </form>
+            <a class="btn btn-primary mb-3 p-2" style="width:20em" href="{% url 'Inicio' %}">Regresar</a>
+        </section>
+    </div>
 {% endblock %}

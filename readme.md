@@ -6,11 +6,11 @@
 
 - Venta de productos de computacion
 
-### Version 
+### Versión 
 
 - 1.0
 
-### Descripcion del proyecto
+### Descripción del proyecto
 
 Página Web destinada a la venta de productos de computacion
 
@@ -39,3 +39,7 @@ Nota: La opción de editar y eliminar productos solo le está permitido al autor
 
 1. PYTHON
 2. DJANGO
+
+### Video funcionamiento aplicación
+
+(https://drive.google.com/file/d/1n11jOg-P0nqYldOXg4eUMLjKFsBfjrpZ/view?usp=sharing)

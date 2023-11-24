@@ -17,7 +17,11 @@ def inicio(req):
         notebooks=Notebooks.objects.filter(nombre__contains=result)
         amplificadores=Amplificadores.objects.filter(nombre__contains=result)
         monitores=Monitores.objects.filter(nombre__contains=result)
-        return render(req, "index.html", {"notebooks":notebooks, "amplificadores":amplificadores, "monitores":monitores}) 
+        if notebooks.exists() or amplificadores.exists() or monitores.exists():
+            return render(req, "index.html", {"notebooks":notebooks, "amplificadores":amplificadores, "monitores":monitores})
+        else:
+            noData=result
+            return render(req, "index.html", {"noData": noData})
     else:
         return render(req, "index.html")
 
@@ -136,10 +140,11 @@ def user_logout(request):
 def user_register(request):
     if request.method == 'POST':
         form = UsuariosForm(request.POST)
-        print("form", form.errors)
         if form.is_valid():
             form.save()
             return redirect('user_login')
+        else:
+            return render(request, 'register.html', {'form': form})
     else:
         form = UsuariosForm()
     return render(request, 'register.html', {'form': form})
@@ -174,3 +179,6 @@ def myProducts(req):
     else:
         noData="Aun no ingresaste productos"
         return render(req, "myProducts.html", {"noData": noData})
+    
+def aboutMe(req):
+    return render(req, 'aboutMe.html', {})

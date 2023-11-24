@@ -22,11 +22,12 @@ urlpatterns = [
     path('amplificadores/editar/<int:pk>/', views.AmplifierUpdateView.as_view(), name='editar_amplificador'),
     path('amplificadores/eliminar/<int:pk>/', views.AmplifierDeleteView.as_view(), name='eliminar_amplificador'),
     
-    path('mi-perfil/', views.Profile.as_view(), name='profile'),
+    path('perfil/', views.Profile.as_view(), name='profile'),
     path('login/', views.user_login, name='user_login'),
     path('logout/', views.user_logout, name='user_logout'),
     path('register/', views.user_register, name='user_register'),
-    path('editar-perfil/', views.editProfile, name='editProfile'),
-    path('editar-contrasenia/', views.ChangePassword.as_view(), name='editPass'),
-    path('mis-productos/', views.myProducts, name='myProducts')
+    path('perfil/editar-perfil/', views.editProfile, name='editProfile'),
+    path('perfil/editar-contrasenia/', views.ChangePassword.as_view(), name='editPass'),
+    path('perfil/mis-productos/', views.myProducts, name='myProducts'),
+    path('perfil/acerca-de-mi/', views.aboutMe, name='aboutMe'),
 ]

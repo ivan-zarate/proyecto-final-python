@@ -14,8 +14,9 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{% static 'AppCoder/css/styles.css' %}" rel="stylesheet" />
         <link href="{% static 'AppCoder/css/stylesIvan.css' %}" rel="stylesheet" />
+        <link href="{% static 'AppCoder/css/styles.css' %}" rel="stylesheet" />
+        
     </head>
     <body>
         <!-- Navigation-->
@@ -104,37 +105,16 @@
                                     {% endfor %}
                             
                         {% endif %}
+                        {% if noData %}
+                            <h3>No se encontraron productos con "{{ noData }}"</h3>
+                        {%endif%}
                 </section>
             </main>
         {% endblock  %}
-        <footer class="footer bg-warning bg-gradient text-dark" style="--bs-bg-opacity: .5;margin-top:2em">
-            <div class="container">
+        <footer class="footer bg-warning bg-gradient text-dark" style="--bs-bg-opacity: .5;margin-top:62vh">
+            <div class="container text-center">
                 <div class="row">
-                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-                        <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><a href="#!">About</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Contact</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
-                        </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2023. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-facebook fs-3"></i></a>
-                            </li>
-                            <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-twitter fs-3"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!"><i class="bi-instagram fs-3"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                    <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2023. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>

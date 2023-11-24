@@ -3,6 +3,7 @@
 {% load static %}
 
 {% block content %}
+<h2 class="container mt-3" >Mis productos</h2>
 <section class="container text-center row p-3" style="margin-top:2em">
     {% if notebooks %}
                 {% for notebook in notebooks %}
@@ -16,7 +17,7 @@
                                     <h5 class="card-title">{{ notebook.nombre }}</h5>
                                     <p class="card-text">$ {{ notebook.precio }}</p>
                                     {% if user == notebook.user %}
-                                        <a class="btn btn-warning" href="{% url 'editar_notebook' notebook.id %}">Editar</a>
+                                        <a class="btn btn-warning me-3" href="{% url 'editar_notebook' notebook.id %}">Editar</a>
                                         <a  class="btn btn-danger" href="{% url 'eliminar_notebook' notebook.id %}">Eliminar</a>
                                     {% endif %}
                                 </div>
@@ -37,7 +38,7 @@
                                     <h5 class="card-title">{{ amplificador.nombre }}</h5>
                                     <p class="card-text">$ {{ amplificador.precio }}</p>
                                     {% if user == amplificador.user %}
-                                        <a class="btn btn-warning" href="{% url 'editar_amplificador' amplificador.id %}">Editar</a>
+                                        <a class="btn btn-warning me-3" href="{% url 'editar_amplificador' amplificador.id %}">Editar</a>
                                         <a  class="btn btn-danger" href="{% url 'eliminar_amplificador' amplificador.id %}">Eliminar</a>
                                     {% endif %}
                                 </div>
@@ -58,7 +59,7 @@
                                     <h5 class="card-title">{{ monitor.nombre }}</h5>
                                     <p class="card-text">$ {{ monitor.precio }}</p>
                                     {% if user == monitor.user %}
-                                        <a class="btn btn-warning" href="{% url 'editar_monitor' monitor.id %}">Editar</a>
+                                        <a class="btn btn-warning me-3" href="{% url 'editar_monitor' monitor.id %}">Editar</a>
                                         <a  class="btn btn-danger" href="{% url 'eliminar_monitor' monitor.id %}">Eliminar</a>
                                     {% endif %}
                                 </div>
@@ -68,7 +69,7 @@
                 {% endfor %}
     {% endif %}
     {% if noData %}
-        {{ noData }}
+        <h3 class="container-fluid" >{{ noData }}</h3>
     {%endif%}
 </section>
 

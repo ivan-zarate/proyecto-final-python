@@ -4,15 +4,15 @@
 
 {% block content %}
 
-
-<h3>Cambiar contraseña de {{user}} </h3>
-
-<form action='' method="POST">
-    {% csrf_token %}
-    <table>
-        {{form}}
-    </table>
-    <button>Cambiar</button>
-</form>
+<div class="bg-success p-2" style="--bs-bg-opacity: .5;">
+    <h3 class="container">Cambiar contraseña de {{user}} </h3>
+    <section class="container d-flex flex-column ">
+        <form class="mb-3" action='' method="POST">
+            {% csrf_token %}
+                {{form}}
+            <button class="btn btn-success mt-3 p-2" style="width:30%" >Cambiar</button>
+        </form>
+        <a class="btn btn-primary mb-3 p-2" style="width:30%" href="{% url 'profile' %}" >Regresar</a>
+    </section>
 
 {% endblock  %}

@@ -1,11 +1,15 @@
 {% extends "index.html" %}
 
 {% block content %}
-    <h1>Registrarse</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Registrarse</button>
-    </form>
-    <a href="{% url 'user_login' %}">Iniciar Sesión</a>
+    <div class="bg-success p-2" style="--bs-bg-opacity: .5;">
+        <h3 class="container">Registro</h3>
+        <section class="container">
+            <form class="mb-3"  method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-success mt-3 p-2" style="width:30%" type="submit">Registrarse</button>
+            </form>
+            <a class="btn btn-primary mb-3 p-2" style="width:30%" href="{% url 'user_login' %}">Iniciar Sesión</a>
+        </section>
+    </div>
 {% endblock %}
