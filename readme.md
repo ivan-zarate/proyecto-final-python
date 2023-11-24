@@ -25,3 +25,16 @@ Cerrar Sesión
 Login en caso de haber cerrado sesión
 Ver todos los productos subidos por el usuario
 Nota: La opción de editar y eliminar productos solo le está permitido al autor de la publicación del producto.
+
+### Tecnología Utilizada
+
+###### Front-End
+1- HTML
+2- CSS
+3 - JAVASCRIPT
+4- BOOTSTRAP
+
+###### Back-End
+
+1 - PYTHON
+2 - DJANGO
