@@ -18,6 +18,7 @@ Los usuarios pueden realizar las siguientes acciones:
 
 Publicar productos
 Visualizar productos publicados, los cuales están distribuidos en las secciones "Monitores", "Amplificadores", "Notebooks"
+Buscar productos por el nombre sin importar la categoria
 Podran acceder a una vista detallada del producto
 Editar el perfil de Usuario
 Cambiar la contraseña de Usuario
