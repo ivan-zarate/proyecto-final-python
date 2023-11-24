@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<h1>Editar Perfil</h1>
+<h4>De {{user}}</h4>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ editProfileForm }}
+    </table>
+    <input type="submit", value="Enviar">
+</form> 
+
+<a href="{% url 'editPass' %}" >Cambiar Contraseña</a>
+
+{% endblock  %}

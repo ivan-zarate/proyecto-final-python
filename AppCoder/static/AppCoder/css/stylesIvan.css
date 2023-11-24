@@ -1,0 +1,13 @@
+.ingreso{
+    display: flex;
+    align-items: center;
+}
+
+.ingreso h5{
+    padding-right: 1em;
+}
+
+.ingreso a{
+    padding: .5em;
+    margin: .3em;
+}
